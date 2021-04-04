@@ -3,6 +3,7 @@ package com.example.entity;
 import com.gitee.sunchenbin.mybatis.actable.annotation.IsAutoIncrement;
 import com.gitee.sunchenbin.mybatis.actable.annotation.IsKey;
 import com.gitee.sunchenbin.mybatis.actable.annotation.Table;
+import lombok.Data;
 
 /**
  * 第三种定义方式，懒人定义，按照驼峰规则转换
@@ -14,6 +15,7 @@ import com.gitee.sunchenbin.mybatis.actable.annotation.Table;
  */
 
 @Table(isSimple = true)
+@Data
 public class UserLogin {
 
 	@IsKey
@@ -23,28 +25,4 @@ public class UserLogin {
 	private String	name;
 
 	private String	type;
-
-	public Integer getId(){
-		return id;
-	}
-
-	public void setId(Integer id){
-		this.id = id;
-	}
-
-	public String getName(){
-		return name;
-	}
-
-	public void setName(String name){
-		this.name = name;
-	}
-
-	public String getType() {
-		return this.type;
-	}
-
-	public void setType(String type) {
-		this.type = type;
-	}
 }

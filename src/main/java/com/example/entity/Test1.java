@@ -7,6 +7,8 @@ import com.gitee.sunchenbin.mybatis.actable.annotation.IsAutoIncrement;
 import com.gitee.sunchenbin.mybatis.actable.annotation.Table;
 import com.gitee.sunchenbin.mybatis.actable.command.BaseModel;
 import com.gitee.sunchenbin.mybatis.actable.constants.MySqlTypeConstant;
+import lombok.Data;
+
 import javax.persistence.Id;
 import java.util.Date;
 
@@ -19,6 +21,7 @@ import java.util.Date;
  * @date 2020/12/24
  */
 @Table(name = "test1")
+@Data
 public class Test1 extends BaseModel {
 
     @Id
@@ -36,35 +39,4 @@ public class Test1 extends BaseModel {
     @Column
     private Date time;
 
-    public Integer getId() {
-        return this.id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public Double getPrice() {
-        return this.price;
-    }
-
-    public void setPrice(Double price) {
-        this.price = price;
-    }
-
-    public String getName() {
-        return this.name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Date getTime() {
-        return this.time;
-    }
-
-    public void setTime(Date time) {
-        this.time = time;
-    }
 }
